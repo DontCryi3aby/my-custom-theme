@@ -1,0 +1,205 @@
+{% comment %} <p class="cl">Full width: {{section.settings.full_width }}</p>
+<p class="cl">Rotate slide: {{section.settings.rotate_slide }}</p>
+<p class="cl">Desktop height: {{section.settings.desktop_height }}</p>
+<p class="cl">Mobile height: {{section.settings.mobile_height }}</p>
+<p class="cl">Change slide every: {{section.settings.change_slide }}</p>
+<p class="cl">Transition: {{section.settings.transition }}</p>
+<p class="cl">Controls: {{section.settings.controls }}</p> {% endcomment %}
+
+{% comment %} {%  for setting in section.settings %}
+  <p class="cl">{{ setting }} : {{ section.settings[setting] }}</p>
+{% endfor %} {% endcomment %}
+
+
+
+<div class="slides">
+    {% for block in section.blocks %}
+        {% case block.type %}
+            {% when 'slide' %}
+            <div class="slide" {{ block.shopify_attributes }}>
+                {{ block.settings.image | image_url: height: nil | image_tag }}
+                <div class="slide-content">
+                    <h3 class="slide-title">
+                        {{ block.settings.title | upcase }}
+                    </h3>
+                    <button class="slide-btn">
+                        {{ block.settings.button_title }}
+                    </button>
+                </div>
+            </div>
+        {% endcase %}
+    {% endfor %}
+</div>
+
+<div class="controls-btns">
+    <button class="btn left"><</button>
+    <button class="btn right">></button>
+</div>
+
+{% comment %} <div class="dots">
+    {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'slide' %}
+            <span class="dot" {{ block.shopify_attributes }}>
+                {% if section.settings.controls == "numbers" %}
+                    {{ forloop.index }}
+                {% endif %}
+            </span>
+        {% endcase %}
+    {% endfor %}
+</div> {% endcomment %}
+
+<style>
+    :root {
+        --slideshow-width: 1200px;
+    }
+
+    .slideshow {
+        margin: 20px auto;
+        width: var(--slideshow-width);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .slides {
+        display: flex;
+        height: 600px;
+        width: var(--slideshow-width);
+        position: relative;
+    }
+
+    .slide {
+        width: 100%;
+        height: 600px;
+        flex: 1 0 100%;
+        position: relative;
+    }
+
+    .slide-content {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+    }
+
+    .slide-title {
+        color: #fff;
+        font-size: 32px;
+    }
+
+    .slide-btn {
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        color: black;
+        background-color: #fff;
+    }
+    .slide-btn:hover {
+        color: #fff;
+        background-color: red;
+        outline: none;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    p.cl {
+        color: red;
+        font-size: 24px;
+    }
+
+    .controls-btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    .btn {
+        padding: 12px;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    
+</style>
+
+<script>
+    const prevBtn = document.querySelector(".btn.left");
+    const nextBtn = document.querySelector(".btn.right");
+
+    console.log(prevBtn)
+    console.log(nextBtn)
+    
+    const slide_wrapper = document.querySelector(".slides");
+    const slides = document.querySelectorAll(".slide");
+    const slideWidth = slides[0].offsetWidth;
+
+    let indexCurrentSlide = 0;
+
+    prevBtn.onclick = (e) => {
+        indexCurrentSlide--;
+        if(indexCurrentSlide < 0) indexCurrentSlide = slides.length - 1;
+        slide_wrapper.style.right = `${slideWidth * indexCurrentSlide}px`;
+    };
+
+    nextBtn.onclick = (e) => {
+        indexCurrentSlide++;
+        if(indexCurrentSlide > slides.length - 1) indexCurrentSlide = 0;
+        slide_wrapper.style.right = `${slideWidth * indexCurrentSlide}px`;
+    };
+
+</script>
+
+{% schema %}
+{
+    "name": "Slideshow",
+    "tag": "section",
+    "class": "slideshow",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Slideshow"
+      }
+    ],
+    "blocks": [
+       {
+         "name": "Slide",
+         "type": "slide",
+         "settings": [
+           {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+           },
+           {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "This is default title"
+            },
+            {
+                "type": "text",
+                "id": "button_title",
+                "label": "Button Title",
+                "default": "SHOP NOW"
+            },
+            {
+                "type": "url",
+                "id": "button_link",
+                "label": "Button Link"
+            }
+         ]
+       }
+     ]
+  }
+{% endschema %}
