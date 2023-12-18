@@ -1,15 +1,103 @@
 {
   "sections": {
     "custom-slider": {
-      "type": "custom_slider"
+      "type": "custom_slider",
+      "blocks": {
+        "7f149cb8-d096-446e-ab54-3072fb8734c2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
+            "title": "This is default title",
+            "button_title": "SHOP NOW",
+            "button_link": ""
+          }
+        },
+        "f2952203-fe03-479f-8b45-9a7b7ba00de1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-pixabay-147411.jpg",
+            "title": "This is default title",
+            "button_title": "SHOP NOW",
+            "button_link": ""
+          }
+        },
+        "d58bd515-15f3-4559-ab31-0ac0d137944a": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-akos-szabo-440731.jpg",
+            "title": "This is default title",
+            "button_title": "SHOP NOW",
+            "button_link": ""
+          }
+        },
+        "6e7a4361-2353-4386-be40-a744ef639bd8": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-ian-turnell-709552.jpg",
+            "title": "This is default title",
+            "button_title": "SHOP NOW",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "7f149cb8-d096-446e-ab54-3072fb8734c2",
+        "f2952203-fe03-479f-8b45-9a7b7ba00de1",
+        "d58bd515-15f3-4559-ab31-0ac0d137944a",
+        "6e7a4361-2353-4386-be40-a744ef639bd8"
+      ],
+      "settings": {
+        "title": ""
+      }
     },
     "custom-image-with-text": {
-      "type": "custom_image_with_text"
+      "type": "custom_image_with_text",
+      "blocks": {
+        "475c6138-9da1-48cd-bfd2-273045c5e44d": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
+            "text": "Example Text"
+          }
+        },
+        "86e90819-a361-4f96-8b8f-69d95b957ec1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-pixabay-147411.jpg",
+            "text": "Example Text"
+          }
+        },
+        "120f75b5-9994-4f8f-a69e-e416e6753182": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-akos-szabo-440731.jpg",
+            "text": "Example Text"
+          }
+        },
+        "d27af247-7c0c-435c-85a9-969f604164db": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-ian-turnell-709552.jpg",
+            "text": "Example Text"
+          }
+        }
+      },
+      "block_order": [
+        "475c6138-9da1-48cd-bfd2-273045c5e44d",
+        "86e90819-a361-4f96-8b8f-69d95b957ec1",
+        "120f75b5-9994-4f8f-a69e-e416e6753182",
+        "d27af247-7c0c-435c-85a9-969f604164db"
+      ],
+      "settings": {
+        "title": ""
+      }
     },
     "custom-title-button": {
-      "type": "custom_title_button"
+      "type": "custom_title_button",
+      "settings": {
+        "label": "EXAMPLE LABEL"
+      }
     }
-
   },
   "order": [
     "custom-slider",
