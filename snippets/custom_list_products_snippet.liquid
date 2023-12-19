@@ -2,7 +2,7 @@
 
 <div class="section">
   <div class="product-list">
-    {% for product in products limit:8 %}
+    {% for product in products limit:limit %}
       <div class="product-item">
         <div class="product_img">
           {{ product.featured_image | image_url: height: nil | image_tag }}

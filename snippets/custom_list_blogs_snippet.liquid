@@ -1,0 +1,13 @@
+<div class="section">
+  <div class="blog-list">
+    {% for blog in blogs limit:limit %}
+      <div class="blog-item">
+        <div class="blog_img">
+          {{ blog.featured_image | image_url: height: nil | image_tag }}
+        </div>
+        <h3 class="blog_title">{{ blog.title }}</h3>
+        <p class="blog_price">{{ blog.price }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>

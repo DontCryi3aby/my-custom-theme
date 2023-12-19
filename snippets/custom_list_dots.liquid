@@ -1,0 +1,28 @@
+<div class="dots">
+    {% for i in (1..length) %}
+        <span class="dot {% if i == 1 %}active{% endif %}" {{ block.shopify_attributes }}>
+        </span>
+    {%endfor %}
+</div>
+
+<style>
+    .dots {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dot {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin: 10px 4px;
+        cursor: pointer;
+        background-color: #ddd;
+    }
+
+    .dot.active {
+        background-color: yellow;
+    }
+</style>
+

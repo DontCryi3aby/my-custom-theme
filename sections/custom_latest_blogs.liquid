@@ -1,0 +1,11 @@
+{% render 'custom_title_button_snippet', heading: "Latest Blog" %}
+{% for blog in blogs.default %}
+    <h1>{{  forloop.length }}</h1>
+    <h1>{{  blog.title }}</h1>
+{% endfor %}
+ 
+{% for collection in blogs.all.news %}
+    <h1>{{collection.title }}</h1>
+{% endfor %}
+
+<h1>HELLO WORLD FROM LATEST BLOGS NEW 2</h1>

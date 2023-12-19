@@ -66,6 +66,7 @@
         height: 600px;
         width: var(--slideshow-width);
         position: relative;
+        transition: all 0.2s linear;
     }
 
     .slide {
@@ -135,9 +136,6 @@
 <script>
     const prevBtn = document.querySelector(".btn.left");
     const nextBtn = document.querySelector(".btn.right");
-
-    console.log(prevBtn)
-    console.log(nextBtn)
     
     const slide_wrapper = document.querySelector(".slides");
     const slides = document.querySelectorAll(".slide");
