@@ -1,0 +1,12 @@
+{% assign products = collections.all.products | sort: 'created_at' | reverse  %}
+{% render 'custom_list_products_snippet', products: products, limit: 8, heading: "NEW ARRIVAL"%}
+{% render 'custom_button_link_snippet', href: "/collections/all", label: "View all products"%}
+
+{% schema %}
+    {
+        "name": "Featured-Products",
+        "tag": "section",
+        "class": "feature-products"
+    }
+{% endschema %}
+
