@@ -47,7 +47,6 @@
         "6e7a4361-2353-4386-be40-a744ef639bd8"
       ],
       "settings": {
-        "title": ""
       }
     },
     "custom-image-with-text": {
@@ -89,19 +88,29 @@
         "d27af247-7c0c-435c-85a9-969f604164db"
       ],
       "settings": {
-        "title": ""
       }
     },
-    "custom-title-button": {
-      "type": "custom_title_button",
+    "custom-featured-products": {
+      "type": "custom_featured_products",
       "settings": {
-        "label": "EXAMPLE LABEL"
+      }
+    },
+    "custom-banner-img": {
+      "type": "custom_banner_img",
+      "settings": {
+      }
+    },
+    "custom-top-sale-products": {
+      "type": "custom_top_sale_products",
+      "settings": {
       }
     }
   },
   "order": [
     "custom-slider",
     "custom-image-with-text",
-    "custom-title-button"
+    "custom-featured-products",
+    "custom-banner-img",
+    "custom-top-sale-products"
   ]
 }
