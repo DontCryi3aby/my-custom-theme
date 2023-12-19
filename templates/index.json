@@ -98,6 +98,8 @@
     "custom-banner-img": {
       "type": "custom_banner_img",
       "settings": {
+        "image_with_text_image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
+        "title": "default title"
       }
     },
     "custom-top-sale-products": {
