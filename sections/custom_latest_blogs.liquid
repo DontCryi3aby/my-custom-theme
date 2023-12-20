@@ -1,4 +1,5 @@
-{% render 'custom_title_button_snippet', heading: "Latest Blog" %}
+{% render 'custom_title_button_snippet', heading: section.settings.title  %}
+
 
 {% assign blog_handles = 'news' | split:',' %}
 
@@ -11,3 +12,19 @@
             {% endfor %}
       </div>
 </div>
+
+{% schema %}
+{
+  "name": "Custom Latest Blogs",
+  "tag": "section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Input Title of Section",
+      "default": "Latest Blog"
+    }
+  ]
+}
+{% endschema %}

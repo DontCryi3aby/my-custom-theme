@@ -1,6 +1,6 @@
 {% assign top_products = collections.all.products | limit: 10 %}
 
-{% render 'custom_list_products_snippet', products: top_products, limit: 8, heading: "TOP SALE" %}
+{% render 'custom_list_products_snippet', products: top_products, limit: 8, heading: section.settings.title %}
 
 <style>
   .btn-link {
@@ -31,7 +31,15 @@
     {
         "name": "Top-Sale-Products",
         "tag": "section",
-        "class": "top-sale-products"
+        "class": "top-sale-products",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Input Title of Section",
+            "default": "Top Sale"
+          }
+        ]
     }
 {% endschema %}
 

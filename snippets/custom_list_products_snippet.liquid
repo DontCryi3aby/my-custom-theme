@@ -4,10 +4,15 @@
   <div class="product-list">
     {% for product in products limit:limit %}
       <div class="product-item">
-        <div class="product_img">
-          {{ product.featured_image | image_url: height: nil | image_tag }}
-        </div>
-        <h3 class="product_title">{{ product.title }}</h3>
+          <a class="product-link" href="{{ product.url }}">
+            <div class="product_img">
+              {{ product.featured_image | image_url: height: nil | image_tag }}
+            </div>
+          </a>
+          <a class="product-link" href="{{ product.url }}">
+            <h3 class="product_title">{{ product.title }}</h3>
+          </a>
+        
         <p class="product_price">{{ product.price }}</p>
       </div>
     {% endfor %}
@@ -43,10 +48,12 @@
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
   }
 
   .product_price {
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
   }
 
   .product_img {

@@ -1,12 +1,20 @@
 {% assign products = collections.all.products | sort: 'created_at' | reverse  %}
-{% render 'custom_list_products_snippet', products: products, limit: 8, heading: "NEW ARRIVAL"%}
+{% render 'custom_list_products_snippet', products: products, limit: 8, heading: section.settings.title %}
 {% render 'custom_button_link_snippet', href: "/collections/all", label: "View all products"%}
 
 {% schema %}
     {
         "name": "Featured-Products",
         "tag": "section",
-        "class": "feature-products"
+        "class": "feature-products",
+        "settings": [
+            {
+            "type": "text",
+            "id": "title",
+            "label": "Input Title of Section",
+            "default": "NEW ARRIVAL"
+            }
+        ]
     }
 {% endschema %}
 
