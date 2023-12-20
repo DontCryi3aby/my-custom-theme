@@ -1,4 +1,4 @@
-{% assign products = collections.all.products | sort: 'created_at' | reverse  %}
+{% assign products = collections.clothes.products | sort: 'created_at' | reverse  %}
 {% render 'custom_list_products_snippet', products: products, limit: 8, heading: section.settings.title %}
 {% render 'custom_button_link_snippet', href: "/collections/all", label: "View all products"%}
 

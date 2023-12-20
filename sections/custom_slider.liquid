@@ -9,7 +9,7 @@
 {% comment %} {%  for setting in section.settings %}
   <p class="cl">{{ setting }} : {{ section.settings[setting] }}</p>
 {% endfor %} {% endcomment %}
-
+{{ 'custom_slider.css' | asset_url | stylesheet_tag }}
 
 
 <div class="slides">
@@ -35,107 +35,6 @@
     <button class="btn left"><</button>
     <button class="btn right">></button>
 </div>
-
-{% comment %} <div class="dots">
-    {% for block in section.blocks %}
-        {% case block.type %}
-          {% when 'slide' %}
-            <span class="dot" {{ block.shopify_attributes }}>
-                {% if section.settings.controls == "numbers" %}
-                    {{ forloop.index }}
-                {% endif %}
-            </span>
-        {% endcase %}
-    {% endfor %}
-</div> {% endcomment %}
-
-<style>
-    :root {
-        --slideshow-width: 1200px;
-    }
-
-    .slideshow {
-        margin: 20px auto;
-        width: var(--slideshow-width);
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .slides {
-        display: flex;
-        height: 600px;
-        width: var(--slideshow-width);
-        position: relative;
-    }
-
-    .slide {
-        width: 100%;
-        height: 600px;
-        flex: 1 0 100%;
-        position: relative;
-    }
-
-    .slide-content {
-        position: absolute;
-        bottom: 50px;
-        left: 50%;
-        transform: translate(-50%);
-        text-align: center;
-    }
-
-    .slide-title {
-        color: #fff;
-        font-size: 30px;
-        font-weight: 400;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .slide-btn {
-        padding: 10px 20px;
-        cursor: pointer;
-        color: #262626;
-        font-size: 12px;
-        font-weight: 600;
-        font-family: 'Poppins', sans-serif;
-        color: black;
-        background-color: #fff;
-    }
-    .slide-btn:hover {
-        color: #fff;
-        background-color: red;
-        outline: none;
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    p.cl {
-        color: red;
-        font-size: 24px;
-    }
-
-    .controls-btns {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-    }
-
-    .btn {
-        padding: 12px;
-        font-size: 32px;
-        cursor: pointer;
-    }
-
-    
-</style>
 
 <script>
     const prevBtn = document.querySelector(".btn.left");

@@ -1,3 +1,5 @@
+{{ 'custom_list_products.css' | asset_url | stylesheet_tag }}
+
 {% render 'custom_title_button_snippet', heading: heading %}
 
 <div class="section">
@@ -13,58 +15,8 @@
             <h3 class="product_title">{{ product.title }}</h3>
           </a>
         
-        <p class="product_price">{{ product.price }}</p>
+        <p class="product_price">{{ product.price | money }}</p>
       </div>
     {% endfor %}
   </div>
 </div>
-
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .section {
-    width: 1200px;
-    margin: 100px auto 0;
-  }
-
-  .product-list {
-    display: flex;
-    flex-wrap:wrap;
-    margin: 0 -10px;
-    align-items: center;
-  }
-
-  .product-item {
-    flex: 0 1 25%;
-    text-align: center;
-    padding: 10px;
-  }
-
-  .product_title {
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .product_price {
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .product_img {
-    width: 100%;
-    height: auto;
-  }
-
-  .product_img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-</style>

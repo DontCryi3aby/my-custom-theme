@@ -1,4 +1,4 @@
-{% assign top_products = collections.all.products | limit: 10 %}
+{% assign top_products = collections.clothes.products | limit: 10 %}
 
 {% render 'custom_list_products_snippet', products: top_products, limit: 8, heading: section.settings.title %}
 
