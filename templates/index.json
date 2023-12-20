@@ -6,7 +6,7 @@
         "7f149cb8-d096-446e-ab54-3072fb8734c2": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
+            "image": "shopify:\/\/shop_images\/Slider1.jpg",
             "title": "This is default title",
             "button_title": "SHOP NOW",
             "button_link": ""
@@ -15,25 +15,7 @@
         "f2952203-fe03-479f-8b45-9a7b7ba00de1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-pixabay-147411.jpg",
-            "title": "This is default title",
-            "button_title": "SHOP NOW",
-            "button_link": ""
-          }
-        },
-        "d58bd515-15f3-4559-ab31-0ac0d137944a": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-akos-szabo-440731.jpg",
-            "title": "This is default title",
-            "button_title": "SHOP NOW",
-            "button_link": ""
-          }
-        },
-        "6e7a4361-2353-4386-be40-a744ef639bd8": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-ian-turnell-709552.jpg",
+            "image": "shopify:\/\/shop_images\/slider2.jpg",
             "title": "This is default title",
             "button_title": "SHOP NOW",
             "button_link": ""
@@ -42,9 +24,7 @@
       },
       "block_order": [
         "7f149cb8-d096-446e-ab54-3072fb8734c2",
-        "f2952203-fe03-479f-8b45-9a7b7ba00de1",
-        "d58bd515-15f3-4559-ab31-0ac0d137944a",
-        "6e7a4361-2353-4386-be40-a744ef639bd8"
+        "f2952203-fe03-479f-8b45-9a7b7ba00de1"
       ],
       "settings": {
       }
