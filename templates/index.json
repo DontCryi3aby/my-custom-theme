@@ -93,6 +93,7 @@
     "custom-featured-products": {
       "type": "custom_featured_products",
       "settings": {
+        "title": "NEW ARRIVAL"
       }
     },
     "custom-banner-img": {
@@ -105,20 +106,55 @@
     "custom-top-sale-products": {
       "type": "custom_top_sale_products",
       "settings": {
+        "title": "Top Sale"
       }
     },
     "custom-latest-blog": {
       "type": "custom_latest_blogs",
       "settings": {
+        "title": "Latest Blog"
       }
     },
     "custom-sign-up": {
       "type": "custom_sign_up_email",
       "settings": {
+        "title": "SIGN UP & SAVE",
+        "desc": "Sale up to 20% off for your next purchase in this month!"
       }
     },
     "custom-brand-slogans": {
       "type": "custom_brand_slogans",
+      "blocks": {
+        "c663f994-38b3-4e71-aa71-7570030781df": {
+          "type": "slogan",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/black-and-white-portrait-mens-fashion.jpg",
+            "title": "Freeship Worldwide",
+            "desc": "Aliquam posuere arcu eget interdum"
+          }
+        },
+        "c634c338-c1e8-4324-bf93-dc4c1bf57058": {
+          "type": "slogan",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/small-business-interior.jpg",
+            "title": "Special Offer",
+            "desc": "Aliquam posuere arcu eget interdum"
+          }
+        },
+        "a1f3f093-6095-43ac-9ff3-16b065c941ca": {
+          "type": "slogan",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/prairie-woman-at-sunset.jpg",
+            "title": "Order Protection",
+            "desc": "Aliquam posuere arcu eget interdum"
+          }
+        }
+      },
+      "block_order": [
+        "c663f994-38b3-4e71-aa71-7570030781df",
+        "c634c338-c1e8-4324-bf93-dc4c1bf57058",
+        "a1f3f093-6095-43ac-9ff3-16b065c941ca"
+      ],
       "settings": {
       }
     }
