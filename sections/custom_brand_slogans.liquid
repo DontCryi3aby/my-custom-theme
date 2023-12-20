@@ -1,0 +1,52 @@
+{{ 'custom_brand_slogans.css' | asset_url | stylesheet_tag }}
+
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'slogan' %}
+        <div class="slogan" {{ block.shopify_attributes }}>
+            <div class="slogan_icon">
+              {{block.settings.image | image_url : height: nil | image_tag }}
+            </div>
+            <div class="slogan_content">
+              <h3 class="slogan_title">{{block.settings.title }}</h3>
+              <p class="slogan_desc">{{block.settings.desc }}</p>
+            </div>
+        </div>
+    {% endcase %}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Custom Brand Slogans",
+  "tag": "section",
+  "class": "brand_slogans",
+  "settings": [
+  ],
+  "max_blocks": 3,
+  "blocks": [
+    {
+      "name": "Slogan",
+      "type": "slogan",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slogan Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Slogan Title",
+          "default": "Freeship Worldwide"
+        },
+        {
+          "type": "text",
+          "id": "desc",
+          "label": "Slogan Short Description",
+          "default": "Aliquam posuere arcu eget interdum"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

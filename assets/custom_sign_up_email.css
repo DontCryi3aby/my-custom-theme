@@ -1,0 +1,49 @@
+.section_sign_up_email {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.sign_up_title {
+  font-family: 'Alegreya', Sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+}
+.sign_up_desc {
+  color: #777;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.sign_up_form {
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.sign_up_form form {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid #777;
+}
+.sign_up_input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.sign_up_input:focus-visible {
+  box-shadow: none;
+}
+
+.sign_up_btn {
+  max-width: 100px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 18px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.sign_up_btn:hover {
+  color: var(--hover-color);
+}

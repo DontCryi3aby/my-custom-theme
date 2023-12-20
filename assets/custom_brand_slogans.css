@@ -1,0 +1,41 @@
+.brand_slogans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -15px;
+  margin-top: 40px;
+}
+
+.slogan {
+  flex: 1;
+  display: flex;
+  padding: 0 15px;
+}
+
+.slogan_icon {
+  width: 60px;
+  height: 60px;
+}
+
+.slogan_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slogan_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+}
+.slogan_title {
+  font-size: 16px;
+  color: #262626;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+.slogan_desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #777;
+}

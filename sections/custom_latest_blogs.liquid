@@ -1,11 +1,13 @@
 {% render 'custom_title_button_snippet', heading: "Latest Blog" %}
-{% for blog in blogs.default %}
-    <h1>{{  forloop.length }}</h1>
-    <h1>{{  blog.title }}</h1>
-{% endfor %}
- 
-{% for collection in blogs.all.news %}
-    <h1>{{collection.title }}</h1>
-{% endfor %}
 
-<h1>HELLO WORLD FROM LATEST BLOGS NEW 2</h1>
+{% assign blog_handles = 'news' | split:',' %}
+
+<div class="latest_blogs_section">
+      <div class="latest_blogs">
+      {% for handle in blog_handles %}
+            {% for article in blogs[handle].articles limit: 2 %}
+                  {% render 'custom_blog_snippet', article: article %}
+            {% endfor %}
+            {% endfor %}
+      </div>
+</div>

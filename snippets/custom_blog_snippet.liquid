@@ -1,0 +1,19 @@
+{{ 'custom_latest_blogs.css' | asset_url | stylesheet_tag }}
+
+<div class="blog">
+    <a class="read_more-link" href="{{ article.url}}">
+        <div class="blog_img">
+            {{ article.image | image_url: height: nil | image_tag }}
+        </div>
+    </a>
+    <a class="read_more-link" href="{{ article.url}}">
+        <h3 class="blog_title">{{ article.title }}</h3>
+    </a>
+    <p class="blog_about">
+        by {{article.author }}, {{article.created_at | date: "%b %d, %Y" }}
+    </p>
+    <p class="blog_content">{{article.content }}</p>
+    <a class="read_more-link" href="{{ article.url}}">
+        <button class="read_more-btn">Read more</button>
+    </a>
+</div>

@@ -1,0 +1,35 @@
+{{ 'custom_sign_up_email.css' | asset_url | stylesheet_tag }}
+
+<div class="sign_up_header">
+    <h3 class="sign_up_title">{{section.settings.title }}</h3>
+    <p class="sign_up_desc">{{section.settings.desc }}</p>
+</div>
+
+<div class="sign_up_form">
+    <form method="POST">
+        <input class="sign_up_input" style="flex: 1" name="customer_email" placeholder="Your email address..." required/>
+        <input class="sign_up_btn" type="submit" value="SUBCRIBE" />
+    </form>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Sign Up Email",
+  "tag": "section",
+  "class": "section_sign_up_email",
+  "settings": [
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Sign up title",
+        "default": "SIGN UP & SAVE"
+    },
+    {
+    "type": "text",
+    "id": "desc",
+    "label": "Sign up desc",
+    "default": "Sale up to 20% off for your next purchase in this month!"
+    }
+  ]
+}
+{% endschema %}

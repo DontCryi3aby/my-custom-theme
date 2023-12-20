@@ -95,7 +95,7 @@
       "settings": {
       }
     },
-    "custom-banner-img-1": {
+    "custom-banner-img": {
       "type": "custom_banner_img",
       "settings": {
         "image_with_text_image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
@@ -107,13 +107,18 @@
       "settings": {
       }
     },
-    "custom-banner-img-2": {
-      "type": "custom_banner_img",
+    "custom-latest-blog": {
+      "type": "custom_latest_blogs",
       "settings": {
       }
     },
-    "custom-latest-blog": {
-      "type": "custom_latest_blogs",
+    "custom-sign-up": {
+      "type": "custom_sign_up_email",
+      "settings": {
+      }
+    },
+    "custom-brand-slogans": {
+      "type": "custom_brand_slogans",
       "settings": {
       }
     }
@@ -122,9 +127,10 @@
     "custom-slider",
     "custom-image-with-text",
     "custom-featured-products",
-    "custom-banner-img-1",
+    "custom-banner-img",
     "custom-top-sale-products",
-    "custom-banner-img-2",
-    "custom-latest-blog"
+    "custom-latest-blog",
+    "custom-sign-up",
+    "custom-brand-slogans"
   ]
 }
