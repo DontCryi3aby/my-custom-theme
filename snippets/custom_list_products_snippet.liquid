@@ -15,16 +15,16 @@
               <div class="product_img_hidden">
                 {{ product.images | last | image_url: height: nil | image_tag }}
                 <div class="actions">
-                  <div class="quick-view action">
+                  <div class="quick-view action" data-tip="Quick view">
                     <i class="fa-regular fa-eye"></i>
                   </div>
-                  <div class="add-wishlist action">
+                  <div class="add-wishlist action" data-tip="Add to wishlist">
                     <i class="fa-solid fa-heart"></i>
                   </div>
-                  <div class="add-compare action">
+                  <div class="add-compare action" data-tip="Add to compare">
                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
                   </div>
-                  <div class="add-to-cart action">
+                  <div class="add-to-cart action" data-tip="Add to cart">
                     <i class="fa-solid fa-cart-shopping"></i>
                   </div>
                 </div>
