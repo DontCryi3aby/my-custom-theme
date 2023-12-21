@@ -23,3 +23,7 @@ button {
   border: none;
   outline: none;
 }
+
+div:empty {
+  display: block;
+}

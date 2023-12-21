@@ -1,13 +1,10 @@
 <div class="title-button">
-    <span class="wrap_custom_title">
-        <span class="label">
-            {% if heading %}
-                {{ heading}}
-            {% else %}
-                EXAMPLE HEADING  
-            {% endif %}
-        </span>
-        <hr class="line"/>
+    <span class="label">
+        {% if heading %}
+            {{ heading}}
+        {% else %}
+            EXAMPLE HEADING  
+        {% endif %}
     </span>
 </div>
 
@@ -15,34 +12,39 @@
 <style>
     .title-button {
         text-align: center;
-    }
-
-    .wrap_custom_title {
-        position: relative;
-        top: -40px;
+        margin-top: 40px;
     }
 
     .label {
         display: inline-block;
         padding: 10px 20px;
-        border: 1px solid black;
+        border: 1px solid #0000001a;
         z-index: 10;
         min-width: 200px;
         background-color: #fff;
         text-transform: uppercase;
+        font-size: 20px;
+        color: #262626;
+        position: relative;
     }
 
-    .line {
-        background-color: black;
-        width: 400px;
-        margin: 0;
-        z-index: 1;
-    }
-
-    .line, .label {
+    .label::before {
+        content: "";
+        border-top: 1px solid #0000001a;
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 100%;
+        transform: translateY(-50%);
+        width: 75px;
+    }
+
+    .label::after {
+        content: "";
+        border-top: 1px solid #0000001a;
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+        width: 75px;
     }
 </style>

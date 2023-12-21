@@ -76,7 +76,7 @@
         "title": "NEW ARRIVAL"
       }
     },
-    "custom-banner-img": {
+    "custom-banner-img-1": {
       "type": "custom_banner_img",
       "settings": {
         "image_with_text_image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
@@ -87,6 +87,13 @@
       "type": "custom_top_sale_products",
       "settings": {
         "title": "Top Sale"
+      }
+    },
+    "custom-banner-img-2": {
+      "type": "custom_banner_img",
+      "settings": {
+        "image_with_text_image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
+        "title": "default title"
       }
     },
     "custom-latest-blog": {
@@ -143,8 +150,9 @@
     "custom-slider",
     "custom-image-with-text",
     "custom-featured-products",
-    "custom-banner-img",
+    "custom-banner-img-1",
     "custom-top-sale-products",
+    "custom-banner-img-2",
     "custom-latest-blog",
     "custom-sign-up",
     "custom-brand-slogans"

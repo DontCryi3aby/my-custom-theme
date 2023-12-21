@@ -1,6 +1,22 @@
-{% assign top_products = collections.clothes.products | limit: 10 %}
 
-{% render 'custom_list_products_snippet', products: top_products, limit: 8, heading: section.settings.title %}
+{% assign top_products = section.settings.collection.products  %}
+{% assign limit = 8 %}
+
+{% render 'custom_list_products_snippet', products: top_products, limit: limit, heading: section.settings.title, wrap: false %}
+
+{{ 'custom_list_products_nowrap.css' | asset_url | stylesheet_tag }}
+
+{% assign pageLength = limit | divided_by: 4.0 | ceil  %}
+
+{% comment %} {% render 'custom_list_dots', length: pageLength  %} {% endcomment %}
+
+<div class="dots_top_sale_product">
+  {% for i in (1..pageLength) %}
+      <span class="dot_top_sale_product {% if i == 1 %}active{% endif %}" {{ block.shopify_attributes }}>
+      </span>
+  {%endfor %}
+</div>
+
 
 <style>
   .btn-link {
@@ -25,7 +41,55 @@
     color: red;
     border-color: red;
   }
+
+  .dots_top_sale_product {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .dot_top_sale_product {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 10px 4px;
+    cursor: pointer;
+    background-color: #ddd;
+  }
+
+  .dot_top_sale_product.active {
+    background-color: var(--hover-color);
+  }
 </style>
+
+<script>
+  const dotsList = document.querySelectorAll('.dot_top_sale_product');
+  console.log(dotsList);
+  const listProductWrap = document.querySelector('.product-list.nowrap .product-list_wrap');
+  const listProduct = document.querySelectorAll('.product-list.nowrap .product-item');
+
+  const productWidth = listProduct[0].offsetWidth;
+  const listProductWrapWidth = productWidth * listProduct.length;
+
+  console.log({productWidth, listProductWrapWidth})
+
+  dotsList.forEach((dot, index) => {
+    dot.onclick = (e) => {
+      // toggle active dot
+      document.querySelector('.dot_top_sale_product.active').classList.remove('active');
+      e.target.classList.add('active');
+
+       if (index !== dotsList.length - 1) {
+         listProductWrap.style.right = `${productWidth * index * 4}px`;
+       } else {
+         listProductWrap.style.right = `${listProductWrapWidth - productWidth * 4}px`;
+       }
+    };
+  });
+</script>
+
+{{ 'custom_top_sale_products.js' | asset_url | script_tag }}
 
 {% schema %}
     {
@@ -38,6 +102,11 @@
             "id": "title",
             "label": "Input Title of Section",
             "default": "Top Sale"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
           }
         ]
     }

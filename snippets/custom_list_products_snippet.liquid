@@ -2,13 +2,35 @@
 
 {% render 'custom_title_button_snippet', heading: heading %}
 
+
 <div class="section">
-  <div class="product-list">
+  <div class="product-list {%if wrap%}wrap{% else%}nowrap{% endif %}">
+    <div class="product-list_wrap"> 
     {% for product in products limit:limit %}
       <div class="product-item">
           <a class="product-link" href="{{ product.url }}">
             <div class="product_img">
-              {{ product.featured_image | image_url: height: nil | image_tag }}
+              {{ product.images | first | image_url: height: nil | image_tag }}
+
+              <div class="product_img_hidden">
+                {{ product.images | last | image_url: height: nil | image_tag }}
+                <div class="actions">
+                  <div class="quick-view action">
+                    <i class="fa-regular fa-eye"></i>
+                  </div>
+                  <div class="add-wishlist action">
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                  <div class="add-compare action">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                  </div>
+                  <div class="add-to-cart action">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                </div>
+              </div>
+
+              
             </div>
           </a>
           <a class="product-link" href="{{ product.url }}">
@@ -18,5 +40,6 @@
         <p class="product_price">{{ product.price | money }}</p>
       </div>
     {% endfor %}
+  </div>
   </div>
 </div>

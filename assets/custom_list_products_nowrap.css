@@ -1,0 +1,8 @@
+.product-list.nowrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.product-list.nowrap .product-item {
+  flex: 1 0 25%;
+}

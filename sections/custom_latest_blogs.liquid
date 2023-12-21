@@ -1,7 +1,6 @@
 {% render 'custom_title_button_snippet', heading: section.settings.title  %}
 
-
-{% assign blog_handles = 'news' | split:',' %}
+{% assign blog_handles = section.settings.blog | split:',' %}
 
 <div class="latest_blogs_section">
       <div class="latest_blogs">
@@ -24,6 +23,11 @@
       "id": "title",
       "label": "Input Title of Section",
       "default": "Latest Blog"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Blog"
     }
   ]
 }

@@ -1,6 +1,6 @@
-{% assign products = collections.clothes.products | sort: 'created_at' | reverse  %}
-{% render 'custom_list_products_snippet', products: products, limit: 8, heading: section.settings.title %}
-{% render 'custom_button_link_snippet', href: "/collections/all", label: "View all products"%}
+{% assign products = section.settings.collection.products | sort: 'created_at' | reverse  %}
+{% render 'custom_list_products_snippet', products: products, limit: 8, heading: section.settings.title, wrap: true %}
+{% render 'custom_button_link_snippet', href: "/collections/all", label: "View all products" %}
 
 {% schema %}
     {
@@ -9,12 +9,17 @@
         "class": "feature-products",
         "settings": [
             {
-            "type": "text",
-            "id": "title",
-            "label": "Input Title of Section",
-            "default": "NEW ARRIVAL"
-            }
+                "type": "text",
+                "id": "title",
+                "label": "Input Title of Section",
+                "default": "NEW ARRIVAL"
+            },
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Collection"
+              }
         ]
-    }
+    }   
 {% endschema %}
 
