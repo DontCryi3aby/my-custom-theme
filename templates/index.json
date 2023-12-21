@@ -35,29 +35,29 @@
         "475c6138-9da1-48cd-bfd2-273045c5e44d": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
-            "text": "Example Text"
+            "image": "shopify:\/\/shop_images\/home10-banner-01.jpg",
+            "text": "Contrast Coat"
           }
         },
         "86e90819-a361-4f96-8b8f-69d95b957ec1": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-pixabay-147411.jpg",
-            "text": "Example Text"
+            "image": "shopify:\/\/shop_images\/home10-banner-02.jpg",
+            "text": "BIKER JACKET WITH PADDED SHOULDER"
           }
         },
         "120f75b5-9994-4f8f-a69e-e416e6753182": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-akos-szabo-440731.jpg",
-            "text": "Example Text"
+            "image": "shopify:\/\/shop_images\/home10-banner-03.jpg",
+            "text": "Contrast Coat"
           }
         },
         "d27af247-7c0c-435c-85a9-969f604164db": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-ian-turnell-709552.jpg",
-            "text": "Example Text"
+            "image": "shopify:\/\/shop_images\/home10-banner-01.jpg",
+            "text": "BIKER JACKET WITH PADDED SHOULDER"
           }
         }
       },
@@ -73,33 +73,36 @@
     "custom-featured-products": {
       "type": "custom_featured_products",
       "settings": {
-        "title": "NEW ARRIVAL"
+        "title": "NEW ARRIVAL",
+        "collection": "clothes"
       }
     },
     "custom-banner-img-1": {
       "type": "custom_banner_img",
       "settings": {
-        "image_with_text_image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
-        "title": "default title"
+        "image_with_text_image": "shopify:\/\/shop_images\/banner.jpg",
+        "title": "CABLE - KNIT NEW ARRIVAL"
       }
     },
     "custom-top-sale-products": {
       "type": "custom_top_sale_products",
       "settings": {
-        "title": "Top Sale"
+        "title": "Top Sale",
+        "collection": "clothes"
       }
     },
     "custom-banner-img-2": {
       "type": "custom_banner_img",
       "settings": {
-        "image_with_text_image": "shopify:\/\/shop_images\/pexels-pixabay-36717.jpg",
-        "title": "default title"
+        "image_with_text_image": "shopify:\/\/shop_images\/banner1.jpg",
+        "title": "OVERSIZED HIGH NECK SWEATER NEW ARRIVAL"
       }
     },
     "custom-latest-blog": {
       "type": "custom_latest_blogs",
       "settings": {
-        "title": "Latest Blog"
+        "title": "Latest Blog",
+        "blog": "news"
       }
     },
     "custom-sign-up": {
